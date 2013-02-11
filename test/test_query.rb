@@ -4,7 +4,7 @@ require 'ruby-dpla/query'
 describe DPLA::Query do
   it "should be able to create a query from a parameter hash" do
     params = {
-      :title => 'Receipt issued by Cecil R. Sovey'
+      "aggregatedCHO.title" => 'The illustrated book of the dog.'
     }
     query = DPLA::Query.new params
     assert query
@@ -12,7 +12,7 @@ describe DPLA::Query do
 
   it "should return the items as an array of hashes" do
     params = {
-      :title => 'Receipt issued by Cecil R. Sovey'
+      "aggregatedCHO.title" => 'The illustrated book of the dog.'
     }
     query = DPLA::Query.new params
     query.results.must_be_kind_of Array

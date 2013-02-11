@@ -7,12 +7,14 @@ module DPLA
   class Query
     include Enumerable
     include HTTParty
-    base_uri 'http://api.dp.la/v1'
+    base_uri 'http://api.dp.la/dev/'
     attr_reader :parameters, :response, :page
 
     PARAMETERS = %w[
-      title description creator type publisher format rights
-      contributor created spatial temporal source id q page_size
+        aggregatedCHO
+        isPartOf
+        provider
+        q
     ]
 
     def self.parameters_correct? params
