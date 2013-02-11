@@ -6,7 +6,7 @@ require 'ruby-dpla/version'
 Gem::Specification.new do |gem|
   gem.name          = "ruby-dpla"
   gem.version       = DPLA::VERSION
-  gem.authors       = ["Misty De Meo"]
+  gem.authors       = ["Misty De Meo", "Justin Clark"]
   gem.email         = ["mistydemeo@gmail.com"]
   gem.description   = %q{Use DPLA in your app!}
   gem.summary       = %q{Use DPLA in your app!}

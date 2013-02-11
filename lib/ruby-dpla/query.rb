@@ -8,12 +8,19 @@ module DPLA
     include Enumerable
     include HTTParty
     base_uri 'http://api.dp.la/dev/'
+    #debug_output
     attr_reader :parameters, :response, :page
 
     PARAMETERS = %w[
         aggregatedCHO
         isPartOf
         provider
+        facets
+        page_size
+        page
+        facet_size
+        sort_by
+        sort_order
         q
     ]
 
@@ -66,6 +73,7 @@ module DPLA
     end
 
     def results; @response['docs']; end
+    def facets; @response['facets']; end
     def count; @response['count']; end
     def start; @response['start']; end
     def limit; @response['limit']; end
